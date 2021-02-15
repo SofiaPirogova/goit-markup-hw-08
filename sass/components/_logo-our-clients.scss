@@ -1,0 +1,21 @@
+/* section our clients */
+.logo-container,
+.logo-container:visited {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid var(--icon-gray);
+  border-radius: 4px;
+  fill: var(--icon-gray);
+
+  transition: fill var(--time-duration) var(--timing-function),
+    border-color var(--time-duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+}

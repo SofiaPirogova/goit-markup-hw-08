@@ -1,0 +1,41 @@
+:root {
+  /* Шрифты */
+  --main-font: 'Roboto', sans-serif;
+  --second-font: 'Raleway', sans-serif;
+  /* Основные цвета */
+  --accent-color: #2196f3;
+  --main-color: #212121;
+  --second-color: #757575;
+  --clean-color: #ffffff;
+  --dark-background: #2f303a;
+  --light-background: #f5f4fa;
+  /* Цвета мелких элементов */
+  --border-header: #ececec;
+  --border-gallery: #eeeeee;
+  --footer-border-input: rgba(255, 255, 255, 0.3);
+  --input-modal-border: rgba(33, 33, 33, 0.2);
+  --footer-link: rgba(255, 255, 255, 0.6);
+  --icon-gray: #afb1b8;
+  --footer-icons: rgba(255, 255, 255, 0.1);
+  --textarea-placeholder: rgba(117, 117, 117, 0.5);
+  /* Градиенты */
+  --banner-gradient: linear-gradient(
+    to top,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+  );
+  /* Тени */
+  --drop-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  --ourteam-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --modal-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --footer-shadow-button: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  /* Оверлеи и Бэкдропы */
+  --modal-back: rgba(0, 0, 0, 0.2);
+  --whatwedo-overlay: rgba(47, 48, 58, 0.8);
+  --gallery-overlay: rgba(33, 150, 243, 0.9);
+  /* Свойства анимации */
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --time-duration: 250ms;
+}

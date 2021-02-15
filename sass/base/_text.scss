@@ -1,0 +1,140 @@
+// общее
+.link {
+  text-decoration: none;
+}
+// header
+
+.site-nav .link,
+.site-nav .link:visited {
+  color: var(--main-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  transition: color var(--time-duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+
+  &.current {
+    color: var(--accent-color);
+  }
+}
+
+.contacts .link,
+.contacts .link:visited {
+  color: var(--second-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  transition: color var(--time-duration) var(--timing-function);
+
+  &:hover,
+  &.link:focus {
+    color: var(--accent-color);
+  }
+}
+
+// заголовки
+.heading {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin: 0px 0px 50px 0px;
+}
+// баннер
+.tagline {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--clean-color);
+}
+
+// Заголовки Прописными буквами
+.heading-uppercase {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  &.heading-uppercase-white {
+    color: var(--clean-color);
+  }
+  &.whatwedo-name-text {
+    text-align: center;
+    background: var(--whatwedo-overlay);
+    padding-top: 27px;
+    padding-bottom: 27px;
+  }
+}
+// Заголовки Наша Команда
+.heading-team {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+// Текст и подписи
+.desc {
+  color: var(--second-color);
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  text-align: left;
+}
+
+.advantages .desc {
+  font-size: 14px;
+  line-height: 1.71;
+  margin: 0px;
+}
+
+.ourteam .desc {
+  line-height: 1.19;
+  text-align: center;
+  margin: 0px 0px 16px 0px;
+}
+
+.gallery .desc {
+  line-height: 1.88;
+  padding: 0px 24px;
+  padding-bottom: 20px;
+  margin: 0px;
+}
+// Галерея
+.gallery .heading-gallery {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  padding: 20px 24px 4px 24px;
+  margin: 0px;
+}
+
+// галерея оверлей
+.overlay-gallery-text {
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--clean-color);
+  background-color: var(--gallery-overlay);
+}
+// футер
+.address-text {
+  color: var(--clean-color);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}

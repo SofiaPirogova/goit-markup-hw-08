@@ -1,0 +1,12 @@
+.logo {
+  color: var(--main-color);
+  font-family: var(--second-font);
+  font-size: 26px;
+
+  &.footer-logo {
+    color: var(--clean-color);
+  }
+  .web {
+    color: var(--accent-color);
+  }
+}

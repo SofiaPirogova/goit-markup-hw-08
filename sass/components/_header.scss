@@ -1,0 +1,60 @@
+/* Header */
+.header {
+  padding: 25px 0px;
+  border-bottom: 1px solid var(--border-header);
+
+  .header-center {
+    align-items: center;
+  }
+}
+
+.header-index {
+  border: none;
+}
+
+.nav-flex {
+  display: flex;
+  align-items: center;
+}
+// навигация
+.site-nav {
+  margin-left: 93px;
+  display: flex;
+
+  .space:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+// контакты
+.contacts {
+  display: flex;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  .contacts-position {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+
+    .icon-contacts {
+      margin-right: 10px;
+    }
+  }
+}
+/* link hover line */
+.link-push-line {
+  position: relative;
+  padding: 32px 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+  }
+}
