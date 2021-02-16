@@ -20,10 +20,32 @@
   margin: 0px 0px 10px 0px;
 }
 
-.flex-advantages {
-  width: 270px;
+.advantages-padding {
+  padding: 60px 15px 30px;
+
+  @media screen and (min-width: $desktop) {
+    padding: 94px 15px 64px;
+  }
+  .flex-advantages {
+    margin-bottom: 30px;
+  }
 }
 
+@media screen and (min-width: $tablet) {
+  .advantages {
+    flex-wrap: wrap;
+  }
+
+  .flex-advantages {
+    width: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .flex-advantages {
+    width: 270px;
+  }
+}
 .advantages-div {
   display: flex;
   background-color: var(--light-background);
@@ -39,6 +61,11 @@
 }
 
 /* section what we do */
+@media screen and (max-width: 1119px) {
+  .section-whatwedo {
+    display: none;
+  }
+}
 .section-whatwedo {
   padding-bottom: 94px;
 
