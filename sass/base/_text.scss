@@ -6,6 +6,10 @@
 
 .site-nav .link,
 .site-nav .link:visited {
+  display: none;
+  @media screen and (min-width: $tablet) {
+    display: inline;
+  }
   color: var(--main-color);
   font-weight: 500;
   font-size: 14px;
@@ -25,10 +29,20 @@
 
 .contacts .link,
 .contacts .link:visited {
+  display: none;
   color: var(--second-color);
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+
+  @media screen and (min-width: $tablet) {
+    display: block;
+    font-size: 12px;
+    line-height: 1.17;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+
   letter-spacing: 0.02em;
   transition: color var(--time-duration) var(--timing-function);
 
@@ -41,7 +55,12 @@
 // заголовки
 .heading {
   font-weight: bold;
-  font-size: 36px;
+  font-size: 28px;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 36px;
+  }
+
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
@@ -50,8 +69,14 @@
 // баннер
 .tagline {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 44px;
+    line-height: 1.36;
+  }
+
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;

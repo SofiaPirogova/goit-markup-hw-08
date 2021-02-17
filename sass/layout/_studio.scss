@@ -1,11 +1,19 @@
 /* section banner */
 .tagline-position {
-  width: 696px;
+  width: 360px;
+  @media screen and (min-width: $desktop) {
+    width: 696px;
+  }
   margin: 0 auto;
 }
 
 .banner {
-  padding: 200px 0px;
+  padding: 118px 0px;
+
+  @media screen and (min-width: $desktop) {
+    padding: 200px 0px;
+  }
+
   background-color: var(--dark-background);
   background-image: var(--banner-gradient), url(../images/bg-our-office.jpg);
   background-size: cover;
@@ -83,13 +91,26 @@
 /* section our team */
 .ourteam {
   background-color: var(--light-background);
+
+  .ourteam-wrap {
+    flex-wrap: wrap;
+  }
 }
 
 // карточка
 .ourteam-back,
 .ourteam-back:visited {
   background-color: var(--clean-color);
-  width: 270px;
+  width: 100%;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 30px) / 2);
+  }
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 3 * 30px) / 4);
+    margin-bottom: 0px;
+  }
   box-shadow: var(--ourteam-shadow);
   border-radius: 0px 0px 4px 4px;
   cursor: pointer;
@@ -105,6 +126,18 @@
   }
 
   .icon-ul {
-    padding: 0 32px 30px 32px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 24px;
+    @media screen and (min-width: $desktop) {
+      padding-bottom: 30px;
+    }
+  }
+}
+
+.icon-list {
+  margin-right: 10px;
+  &:last-child {
+    margin-right: 0px;
   }
 }
