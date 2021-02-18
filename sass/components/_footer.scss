@@ -5,6 +5,8 @@
   padding: 60px 0px;
 
   .footer-flex {
+    padding-left: 15px;
+    padding-right: 15px;
     .footer-p {
       text-align: center;
       margin-bottom: 20px;
@@ -15,7 +17,7 @@
       }
     }
 
-    @media screen and (min-width: $tablet) {
+    @media screen and (min-width: $tablet) and (max-width: 1119px) {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -24,7 +26,6 @@
 
     @media screen and (min-width: $desktop) {
       display: flex;
-      flex-wrap: nowrap;
 
       .footer-margin {
         margin-left: 70px;

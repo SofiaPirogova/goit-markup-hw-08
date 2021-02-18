@@ -20,8 +20,8 @@ body {
   margin-left: auto;
   margin-right: auto;
   // width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
+  // padding-left: 15px;
+  // padding-right: 15px;
 
   @media screen and (min-width: $mobile) {
     width: 480px;
@@ -38,12 +38,12 @@ body {
 
 /* most sections */
 .section-padding {
-  padding: 60px;
+  padding: 60px 15px;
 }
 
 @media screen and (min-width: $desktop) {
   .section-padding {
-    padding: 94px;
+    padding: 94px 15px;
   }
 }
 

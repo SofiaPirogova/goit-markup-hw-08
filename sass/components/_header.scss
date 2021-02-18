@@ -6,6 +6,8 @@
 
   .header-center {
     align-items: center;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 }
 
@@ -13,11 +15,41 @@
   border: none;
 }
 
-@media screen and (min-width: $tablet) {
-  .nav-flex {
-    display: flex;
-    align-items: center;
+.nav-flex {
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 767px) {
+    justify-content: space-between;
+
+    .site-nav,
+    .contacts {
+      display: none;
+    }
   }
+}
+
+.button-header-mobile,
+.button-header-mobile:visited {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  outline: none;
+  fill: var(--main-color);
+
+  transition: fill var(--time-duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+}
+@media screen and (min-width: $tablet) {
+  .button-header-mobile {
+    display: none;
+  }
+
   // навигация
   .site-nav {
     margin-left: 93px;
