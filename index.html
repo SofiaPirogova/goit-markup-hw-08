@@ -32,8 +32,9 @@
         <!-- кнопка мобильной версии хедера -->
         <button
           type="button"
-          class="button-header-mobile is-open-header-menu"
+          class="button-header-mobile"
           aria-expanded="false"
+          aria-controls="div-nav-contacts"
           data-menu-button
         >
           <svg
@@ -53,7 +54,7 @@
         </button>
 
         <!-- таблетка и десктоп -->
-        <div class="div-nav-contacts">
+        <div class="div-nav-contacts" id="div-nav-contacts" data-menu>
           <nav class="nav-flex">
             <ul class="site-nav list">
               <li class="space">
@@ -87,6 +88,13 @@
                 +38 096 111 11 11</a
               >
             </li>
+          </ul>
+
+          <ul class="list header-mobile-social header-mobile-social-text">
+            <li class="header-mobile-social-list"><a href="#"></a>Instagram</li>
+            <li class="header-mobile-social-list"><a href="#"></a>Twitter</li>
+            <li class="header-mobile-social-list"><a href="#"></a>Facebook</li>
+            <li class="header-mobile-social-list"><a href="#"></a>LinkedIn</li>
           </ul>
         </div>
       </div>

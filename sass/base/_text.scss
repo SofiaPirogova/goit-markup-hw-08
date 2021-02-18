@@ -30,7 +30,15 @@
     color: var(--accent-color);
   }
 }
-
+// мобилка хедер
+.header-mobile-social-text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.12;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
 .contacts .link,
 .contacts .link:visited {
   // display: none;
