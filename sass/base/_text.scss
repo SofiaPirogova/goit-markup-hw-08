@@ -6,15 +6,19 @@
 
 .site-nav .link,
 .site-nav .link:visited {
-  display: none;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+
+  @media screen and (max-width: 767px) {
+    font-size: 40px;
+    line-height: 1.17;
+  }
   @media screen and (min-width: $tablet) {
     display: inline;
+    font-size: 14px;
+    line-height: 1.14;
   }
   color: var(--main-color);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
   transition: color var(--time-duration) var(--timing-function);
 
   &:hover,
@@ -29,9 +33,20 @@
 
 .contacts .link,
 .contacts .link:visited {
-  display: none;
-  color: var(--second-color);
+  // display: none;
   font-weight: 500;
+  letter-spacing: 0.02em;
+
+  @media screen and (max-width: 767px) {
+    font-size: 24px;
+    line-height: 1.17;
+
+    &.blue {
+      font-size: 34px;
+      line-height: 1.18;
+      color: var(--accent-color);
+    }
+  }
 
   @media screen and (min-width: $tablet) {
     display: block;
@@ -43,7 +58,7 @@
     line-height: 1.14;
   }
 
-  letter-spacing: 0.02em;
+  color: var(--second-color);
   transition: color var(--time-duration) var(--timing-function);
 
   &:hover,
