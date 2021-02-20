@@ -6,19 +6,42 @@
     .div-nav-contacts {
       display: none;
       background-color: var(--clean-color);
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      height: 100vh;
       z-index: 3;
+      padding: 48px 83px 48px 40px;
+
+      .mobile-end-window {
+        position: fixed;
+        bottom: 40px;
+        left: 40px;
+      }
 
       &.is-open-header-menu {
         display: block;
       }
+      .space {
+        margin-bottom: 32px;
+      }
 
+      .contacts {
+        display: flex;
+        flex-direction: column-reverse;
+        .contacts-li {
+          margin-bottom: 32px;
+
+          .icon-contacts {
+            display: none;
+          }
+        }
+      }
       .header-mobile-social {
         display: flex;
+        margin-top: 32px;
+        margin-left: -10px;
 
         .header-mobile-social-list {
           padding: 0px 10px;
@@ -39,6 +62,12 @@
     padding-right: 15px;
     padding-left: 15px;
   }
+
+  @media screen and (max-width: 767px) {
+    .container.header-center {
+      width: 100%;
+    }
+  }
 }
 
 .header-index {
@@ -49,6 +78,26 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media screen and (min-width: $tablet) and (max-width: 1199px) {
+  .header {
+    padding: 21px 0;
+
+    .contacts {
+      width: 138px;
+      display: flex;
+      flex-wrap: wrap;
+
+      .contacts-li {
+        margin-bottom: 10px;
+        margin-right: 0px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: $tablet) {
@@ -101,7 +150,10 @@
 
   // навигация
   .site-nav {
-    margin-left: 93px;
+    margin-left: 88px;
+    @media screen and (min-width: $desktop) {
+      margin-left: 93px;
+    }
     margin-right: auto;
     display: flex;
 
@@ -112,12 +164,13 @@
   // контакты
   .contacts {
     display: flex;
+    @media screen and (min-width: $desktop) {
+      .contacts-li {
+        margin-right: 30px;
 
-    .contacts-li {
-      margin-right: 30px;
-
-      &:last-child {
-        margin-right: 0;
+        &:last-child {
+          margin-right: 0;
+        }
       }
     }
 
