@@ -49,6 +49,7 @@
   width: 100%;
   height: 100%;
   background-color: var(--modal-back);
+  z-index: 5;
   opacity: 1;
   -webkit-transition: opacity var(--time-duration) var(--timing-function);
   transition: opacity var(--time-duration) var(--timing-function);
@@ -75,12 +76,31 @@
   transition: -webkit-transform var(--time-duration) var(--timing-function);
   transition: transform var(--time-duration) var(--timing-function);
   transition: transform var(--time-duration) var(--timing-function), -webkit-transform var(--time-duration) var(--timing-function);
-  width: 528px;
-  height: 581px;
+  z-index: 6;
   background-color: var(--clean-color);
   border-radius: 4px;
   -webkit-box-shadow: var(--modal-shadow);
           box-shadow: var(--modal-shadow);
+}
+
+@media screen and (max-width: 479px) {
+  .modal {
+    max-width: 450px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal .modal-close-button {
@@ -217,6 +237,16 @@
           align-items: center;
 }
 
+@media screen and (max-width: 479px) {
+  .agree-form {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+}
+
 .agree-form .checkbox {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -224,9 +254,26 @@
 }
 
 .agree-form .checkbox-text {
-  font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+}
+
+@media screen and (max-width: 479px) {
+  .agree-form .checkbox-text {
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .agree-form .checkbox-text {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-height: 1200px) {
+  .agree-form .checkbox-text {
+    font-size: 14px;
+  }
 }
 
 .agree-form .agree {
@@ -700,13 +747,20 @@ body {
 .banner {
   padding: 118px 0px;
   background-color: var(--dark-background);
-  background-image: var(--banner-gradient), url(../images/bg-our-office.jpg);
+  background-image: var(--banner-gradient), url("../images/bg-our-office-1x.jpg");
   background-size: cover;
+  background-position: center;
 }
 
 @media screen and (min-width: 1200px) {
   .banner {
     padding: 200px 0px;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .banner {
+    background-image: var(--banner-gradient), url("../images/bg-our-office-2x.jpg");
   }
 }
 
