@@ -440,6 +440,12 @@ body {
   color: var(--accent-color);
 }
 
+@media screen and (max-width: 479px) {
+  .header-mobile-social-text {
+    font-size: 10px;
+  }
+}
+
 .contacts .link,
 .contacts .link:visited {
   font-weight: 500;
@@ -449,7 +455,21 @@ body {
   transition: color var(--time-duration) var(--timing-function);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 479px) {
+  .contacts .link,
+  .contacts .link:visited {
+    font-size: 18px;
+    line-height: 1.17;
+  }
+  .contacts .link.blue,
+  .contacts .link:visited.blue {
+    font-size: 24px;
+    line-height: 1.18;
+    color: var(--accent-color);
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .contacts .link,
   .contacts .link:visited {
     font-size: 24px;
