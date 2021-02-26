@@ -1,7 +1,21 @@
 // buttons
 .flex-button {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 767px) {
+    .button {
+      margin-bottom: 15px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    justify-content: center;
+    flex-wrap: nowrap;
+    .button {
+      margin-bottom: 50px;
+    }
+  }
 }
 
 .space-button:not(:last-child) {
@@ -9,19 +23,54 @@
 }
 
 /* section gallery */
-.gallery {
-  padding-bottom: 64px;
 
-  .flex-gallery {
-    display: flex;
+.gallery {
+  padding-bottom: 34px;
+
+  @media screen and (min-width: $tablet) {
+    .flex-gallery {
+      display: flex;
+      justify-content: space-between;
+    }
+    .wrap {
+      flex-wrap: wrap;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 64px;
   }
 }
 
 .gallery-back,
 .gallery-back:visited {
-  width: 370px;
+  width: 100%;
   margin-bottom: 30px;
-  margin-right: 30px;
+
+  .bordering {
+    border-bottom: 1px solid var(--border-gallery);
+    border-right: 1px solid var(--border-gallery);
+    border-left: 1px solid var(--border-gallery);
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    width: calc((100% - 30px) / 2);
+    margin-right: 30px;
+    border: 1px solid var(--border-gallery);
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    .bordering {
+      border: none;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 2 * 30px) / 3);
+  }
+
   cursor: pointer;
 
   transition: background-color var(--time-duration) var(--timing-function),
@@ -32,15 +81,18 @@
     background-color: var(--clean-color);
     filter: var(--drop-shadow);
   }
-  &:nth-child(3n) {
-    margin-right: 0px;
-  }
+  // &:nth-child(2n) {
+  //   @media screen and (max-width: 1199px) {
+  //     margin-right: 0px;
+  //   }
+  // }
 
-  .bordering {
-    border-bottom: 1px solid var(--border-gallery);
-    border-right: 1px solid var(--border-gallery);
-    border-left: 1px solid var(--border-gallery);
-  }
+  // &:nth-child(3n) {
+  //   @media screen and (min-width: $desktop) {
+  //     margin-right: 0px;
+  //   }
+  // }
+
   .img-gallery {
     display: block;
   }

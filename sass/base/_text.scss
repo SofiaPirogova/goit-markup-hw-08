@@ -6,11 +6,19 @@
 
 .site-nav .link,
 .site-nav .link:visited {
-  color: var(--main-color);
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
   letter-spacing: 0.02em;
+
+  @media screen and (max-width: 767px) {
+    font-size: 40px;
+    line-height: 1.17;
+  }
+  @media screen and (min-width: $tablet) {
+    display: inline;
+    font-size: 14px;
+    line-height: 1.14;
+  }
+  color: var(--main-color);
   transition: color var(--time-duration) var(--timing-function);
 
   &:hover,
@@ -22,14 +30,57 @@
     color: var(--accent-color);
   }
 }
+// мобилка хедер
+.header-mobile-social-text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.12;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
 
+  @media screen and (max-width: 479px) {
+    font-size: 10px;
+  }
+}
 .contacts .link,
 .contacts .link:visited {
-  color: var(--second-color);
+  // display: none;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
   letter-spacing: 0.02em;
+
+  @media screen and (max-width: 479px) {
+    font-size: 18px;
+    line-height: 1.17;
+    &.blue {
+      font-size: 24px;
+      line-height: 1.18;
+      color: var(--accent-color);
+    }
+  }
+
+  @media screen and (min-width: $mobile) and (max-width: 767px) {
+    font-size: 24px;
+    line-height: 1.17;
+
+    &.blue {
+      font-size: 34px;
+      line-height: 1.18;
+      color: var(--accent-color);
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: block;
+    font-size: 12px;
+    line-height: 1.17;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+
+  color: var(--second-color);
   transition: color var(--time-duration) var(--timing-function);
 
   &:hover,
@@ -41,7 +92,12 @@
 // заголовки
 .heading {
   font-weight: bold;
-  font-size: 36px;
+  font-size: 28px;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 36px;
+  }
+
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
@@ -50,8 +106,14 @@
 // баннер
 .tagline {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 44px;
+    line-height: 1.36;
+  }
+
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;

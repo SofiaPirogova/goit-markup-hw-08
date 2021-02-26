@@ -1,10 +1,72 @@
 /* Header */
+.body {
+  position: relative;
+
+  @media screen and (max-width: 767px) {
+    .div-nav-contacts {
+      display: none;
+      background-color: var(--clean-color);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 3;
+      padding: 48px 83px 48px 40px;
+
+      .mobile-end-window {
+        position: fixed;
+        bottom: 40px;
+        left: 40px;
+      }
+
+      &.is-open-header-menu {
+        display: block;
+      }
+      .space {
+        margin-bottom: 32px;
+      }
+
+      .contacts {
+        display: flex;
+        flex-direction: column-reverse;
+        .contacts-li {
+          margin-bottom: 32px;
+
+          .icon-contacts {
+            display: none;
+          }
+        }
+      }
+      .header-mobile-social {
+        display: flex;
+        margin-top: 32px;
+        margin-left: -10px;
+
+        .header-mobile-social-list {
+          padding: 0px 10px;
+          border-right: 1px solid var(--input-modal-border);
+        }
+      }
+    }
+  }
+}
+
 .header {
   padding: 25px 0px;
   border-bottom: 1px solid var(--border-header);
 
   .header-center {
+    display: flex;
     align-items: center;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  @media screen and (max-width: 767px) {
+    .container.header-center {
+      width: 100%;
+    }
   }
 }
 
@@ -15,46 +77,125 @@
 .nav-flex {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
-// навигация
-.site-nav {
-  margin-left: 93px;
-  display: flex;
+@media screen and (min-width: $tablet) and (max-width: 1199px) {
+  .header {
+    padding: 21px 0;
 
-  .space:not(:last-child) {
-    margin-right: 50px;
-  }
-}
-// контакты
-.contacts {
-  display: flex;
+    .contacts {
+      width: 138px;
+      display: flex;
+      flex-wrap: wrap;
 
-  &:last-child {
-    margin-right: 0;
-  }
+      .contacts-li {
+        margin-bottom: 10px;
+        margin-right: 0px;
 
-  .contacts-position {
-    margin-right: 30px;
-    display: flex;
-    align-items: center;
-
-    .icon-contacts {
-      margin-right: 10px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
   }
 }
-/* link hover line */
-.link-push-line {
-  position: relative;
-  padding: 32px 0;
 
-  &::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
+@media screen and (min-width: $tablet) {
+  .div-nav-contacts {
     width: 100%;
-    height: 4px;
-    background-color: var(--accent-color);
-    border-radius: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header-mobile-social {
+      display: none;
+    }
+  }
+}
+
+.button-header-mobile,
+.button-header-mobile:visited {
+  margin-left: auto;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  outline: none;
+  fill: var(--main-color);
+  z-index: 4;
+
+  transition: fill var(--time-duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+
+  .icon-menu-close-mobile {
+    display: none;
+  }
+  &.is-open-header-menu .icon-menu-close-mobile {
+    display: block;
+  }
+
+  &.is-open-header-menu .icon-menu-mobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .button-header-mobile {
+    display: none;
+  }
+
+  // навигация
+  .site-nav {
+    margin-left: 88px;
+    @media screen and (min-width: $desktop) {
+      margin-left: 93px;
+    }
+    margin-right: auto;
+    display: flex;
+
+    .space:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+  // контакты
+  .contacts {
+    display: flex;
+    @media screen and (min-width: $desktop) {
+      .contacts-li {
+        margin-right: 30px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .contacts-position {
+      display: flex;
+      align-items: center;
+
+      .icon-contacts {
+        margin-right: 10px;
+      }
+    }
+  }
+  /* link hover line */
+  .link-push-line {
+    position: relative;
+    padding: 32px 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 4px;
+      background-color: var(--accent-color);
+      border-radius: 2px;
+    }
   }
 }

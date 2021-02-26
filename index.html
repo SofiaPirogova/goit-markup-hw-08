@@ -21,50 +21,92 @@
     <!-- <link rel="stylesheet" href="./CSS/style.css" /> -->
   </head>
 
-  <body>
+  <body class="body">
     <!--Шапка сайта-->
 
     <header class="header header-index">
-      <div class="container flex header-center">
-        <nav class="nav-flex">
-          <a lang="en" href="./index.html" class="logo link"
-            ><span class="web">Web</span>Studio</a
+      <div class="container header-center">
+        <a lang="en" href="./index.html" class="logo link"
+          ><span class="web">Web</span>Studio</a
+        >
+        <!-- кнопка мобильной версии хедера -->
+        <button
+          type="button"
+          class="button-header-mobile"
+          aria-expanded="false"
+          aria-controls="div-nav-contacts"
+          data-menu-button
+        >
+          <svg
+            width="40px"
+            height="40px"
+            aria-label="Переключатель мобильного меню"
           >
-          <ul class="site-nav list">
-            <li class="space">
-              <a href="./index.html" class="link current link-push-line"
-                >Студия</a
-              >
-            </li>
-            <li class="space">
-              <a href="./portfolio.html" class="link">Портфолио</a>
-            </li>
-            <li class="space">
-              <a href="" class="link">Контакты</a>
-            </li>
-          </ul>
-        </nav>
+            <use
+              class="icon-menu-mobile"
+              href="./images/svg/sprite-menu-mobile.svg#icon-menu-mobile"
+            ></use>
+            <use
+              class="icon-menu-close-mobile"
+              href="./images/svg/sprite-menu-mobile.svg#icon-menu-close-mobile"
+            ></use>
+          </svg>
+        </button>
 
-        <ul class="contacts list">
-          <li>
-            <a href="mailto:info@devstudio.com" class="link contacts-position"
-              ><svg class="icon-contacts" width="16" height="12">
-                <use href="./images/svg/sprite.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li>
-            <a
-              href="tel:+380961111111"
-              class="link font-contacts contacts-position"
-              ><svg class="icon-contacts" width="10" height="16">
-                <use href="./images/svg/sprite.svg#icon-phone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        <!-- таблетка и десктоп -->
+        <div class="div-nav-contacts" id="div-nav-contacts" data-menu>
+          <nav class="nav-flex">
+            <ul class="site-nav list">
+              <li class="space">
+                <a href="./index.html" class="link current link-push-line"
+                  >Студия</a
+                >
+              </li>
+              <li class="space">
+                <a href="./portfolio.html" class="link">Портфолио</a>
+              </li>
+              <li class="space">
+                <a href="" class="link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="mobile-end-window">
+            <ul class="contacts list">
+              <li class="contacts-li">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="link contacts-position"
+                  ><svg class="icon-contacts" width="16" height="12">
+                    <use href="./images/svg/sprite.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="contacts-li">
+                <a href="tel:+380961111111" class="link blue contacts-position"
+                  ><svg class="icon-contacts" width="10" height="16">
+                    <use href="./images/svg/sprite.svg#icon-phone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+
+            <ul class="list header-mobile-social header-mobile-social-text">
+              <li class="header-mobile-social-list">
+                <a href="#"></a>Instagram
+              </li>
+              <li class="header-mobile-social-list"><a href="#"></a>Twitter</li>
+              <li class="header-mobile-social-list">
+                <a href="#"></a>Facebook
+              </li>
+              <li class="header-mobile-social-list">
+                <a href="#"></a>LinkedIn
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <!--Основной уникальный контент-->
@@ -79,7 +121,7 @@
       </section>
 
       <!--Наши преимущества-->
-      <section class="container section-padding">
+      <section class="container advantages-padding">
         <h2 hidden>Наши преимущества</h2>
         <ul class="advantages list flex">
           <li class="flex-advantages">
@@ -149,9 +191,13 @@
           <li class="whatwedo-list">
             <a href="#"
               ><img
-                src="./images/keyboards.jpg"
+                class="img"
+                srcset="
+                  ./images/keyboards-1x.jpg 1x,
+                  ./images/keyboards-2x.jpg 2x
+                "
+                src="./images/keyboards-1x.jpg"
                 alt="Печатает на клавиатуре"
-                width="370"
             /></a>
             <div
               class="whatwedo-name-position heading-uppercase heading-uppercase-white whatwedo-name-text"
@@ -162,9 +208,13 @@
           <li class="whatwedo-list">
             <a href="#"
               ><img
-                src="./images/lookatthephone.jpg"
+                class="img"
+                srcset="
+                  ./images/lookatthephone-1x.jpg 1x,
+                  ./images/lookatthephone-2x.jpg 2x
+                "
+                src="./images/lookatthephone-1x.jpg"
                 alt="Смотрит на телефон и на экран"
-                width="370"
             /></a>
             <div
               class="whatwedo-name-position heading-uppercase heading-uppercase-white whatwedo-name-text"
@@ -175,9 +225,13 @@
           <li class="whatwedo-list">
             <a href="#"
               ><img
-                src="./images/lookatthepalette.jpg"
+                class="img"
+                srcset="
+                  ./images/lookatthepallet-1x.jpg 1x,
+                  ./images/lookatthepallet-2x.jpg 2x
+                "
+                src="./images/lookatthepallet-1x.jpg"
                 alt="Смотрит на цветовую палитру"
-                width="370"
             /></a>
             <div
               class="whatwedo-name-position heading-uppercase heading-uppercase-white whatwedo-name-text"
@@ -188,20 +242,24 @@
         </ul>
       </section>
       <!--Наши специалисты-->
-      <section class="ourteam section-padding">
-        <div class="container">
+      <section class="ourteam">
+        <div class="container section-padding">
           <h2 class="heading">Наша команда</h2>
-          <ul class="list flex">
+          <ul class="list ourteam-wrap flex">
             <li class="ourteam-back">
               <a href="#"
                 ><img
-                  src="./images/our-team/igor.jpg"
+                  class="img"
+                  srcset="
+                    ./images/our-team/igor-1x.jpg 1x,
+                    ./images/our-team/igor-2x.jpg 2x
+                  "
+                  src="./images/our-team/igor-1x.jpg"
                   alt="фото Игоря Демьяненко"
-                  width="270"
               /></a>
               <h3 class="heading-team">Игорь Демьяненко</h3>
               <p class="desc">Product Designer</p>
-              <ul class="flex list icon-ul">
+              <ul class="list icon-ul">
                 <li class="icon-list">
                   <a class="icon-social-list" href="#">
                     <svg class="icon-social">
@@ -235,13 +293,17 @@
             <li class="ourteam-back">
               <a href=""
                 ><img
-                  src="./images/our-team/olga.jpg"
+                  class="img"
+                  srcset="
+                    ./images/our-team/olga-1x.jpg 1x,
+                    ./images/our-team/olga-2x.jpg 2x
+                  "
+                  src="./images/our-team/olga-1x.jpg"
                   alt="фото Ольги Репиной"
-                  width="270"
               /></a>
               <h3 class="heading-team">Ольга Репина</h3>
               <p class="desc">Frontend Developer</p>
-              <ul class="flex list icon-ul">
+              <ul class="flex-mobile-desktop list icon-ul">
                 <li class="icon-list">
                   <a class="icon-social-list" href="#">
                     <svg class="icon-social">
@@ -275,13 +337,17 @@
             <li class="ourteam-back">
               <a href=""
                 ><img
-                  src="./images/our-team/nikolay.jpg"
+                  class="img"
+                  srcset="
+                    ./images/our-team/nikolay-1x.jpg 1x,
+                    ./images/our-team/nikolay-2x.jpg 2x
+                  "
+                  src="./images/our-team/nikolay-1x.jpg"
                   alt="фото Николая Тарасова"
-                  width="270"
               /></a>
               <h3 class="heading-team">Николай Тарасов</h3>
               <p class="desc">Marketing</p>
-              <ul class="flex list icon-ul">
+              <ul class="flex-mobile-desktop list icon-ul">
                 <li>
                   <a class="icon-social-list" href="#">
                     <svg class="icon-social">
@@ -315,13 +381,17 @@
             <li class="ourteam-back">
               <a href="#"
                 ><img
-                  src="./images/our-team/mickael.jpg"
+                  class="img"
+                  srcset="
+                    ./images/our-team/mickael-1x.jpg 1x,
+                    ./images/our-team/mickael-2x.jpg 2x
+                  "
+                  src="./images/our-team/mickael-1x.jpg"
                   alt="фото Михаила Ермакова"
-                  width="270"
               /></a>
               <h3 class="heading-team">Михаил Ермаков</h3>
               <p class="desc">UI Designer</p>
-              <ul class="flex list icon-ul">
+              <ul class="flex-mobile-desktop list icon-ul">
                 <li class="icon-list">
                   <a class="icon-social-list" href="#">
                     <svg class="icon-social">
@@ -356,18 +426,18 @@
         </div>
       </section>
       <!-- Постоянные клиенты -->
-      <section class="section-padding">
-        <div class="container">
+      <section>
+        <div class="container clients-padding">
           <h2 class="heading">Постоянные клиенты</h2>
-          <ul class="list flex">
-            <li>
+          <ul class="list clients-wrap flex-mobile-desktop">
+            <li class="clients-li">
               <a class="logo-container" href="">
                 <svg class="icon-logo" width="42px" height="49px">
                   <use href="./images/svg/sprite.svg#icon-logo-one"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="clients-li">
               <a class="logo-container" href="">
                 <svg class="icon-logo" width="40px" height="52px">
                   <use href="./images/svg/sprite.svg#icon-logo-two"></use>
@@ -375,28 +445,28 @@
               </a>
             </li>
 
-            <li>
+            <li class="clients-li">
               <a class="logo-container" href="">
                 <svg class="icon-logo" width="41px" height="43px">
                   <use href="./images/svg/sprite.svg#icon-logo-three"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="clients-li">
               <a class="logo-container" href="">
                 <svg class="icon-logo" width="80px" height="42px">
                   <use href="./images/svg/sprite.svg#icon-logo-four"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="clients-li">
               <a class="logo-container" href="">
                 <svg class="icon-logo" width="59px" height="47px">
                   <use href="./images/svg/sprite.svg#icon-logo-five"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="clients-li">
               <a class="logo-container" href="">
                 <svg class="icon-logo" width="89px" height="46px">
                   <use href="./images/svg/sprite.svg#icon-logo-six"></use>
@@ -409,7 +479,7 @@
     </main>
     <footer class="footer">
       <div class="container footer-flex">
-        <div>
+        <div class="footer-address-logo">
           <a lang="en" href="./index.html" class="logo footer-logo link"
             ><span class="web">Web</span>Studio</a
           >
@@ -423,7 +493,7 @@
           <p class="footer-p heading-uppercase heading-uppercase-white">
             присоединяйтесь
           </p>
-          <ul class="flex list">
+          <ul class="footer-icon-ul list">
             <li class="footer-space-icon">
               <a class="icon-footer-list" href="#">
                 <svg class="icon-social">
@@ -553,5 +623,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu-mobile.js"></script>
   </body>
 </html>
